@@ -13,7 +13,7 @@ import { routes } from "./routes";
 export const Navigation = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <BrowserRouter> 
+      <BrowserRouter>
         <div className="main-layout">
           <nav>
             <img src={logo} alt="React Logo" />
@@ -22,7 +22,9 @@ export const Navigation = () => {
                 <li key={route.path}>
                   <NavLink
                     to={route.to}
-                    className={({ isActive }) => (isActive ? "nav-active" : "")}
+                    className={({ isActive }) =>
+                      !isActive ? "nav-active" : ""
+                    }
                   >
                     {route.name}
                   </NavLink>
@@ -34,7 +36,7 @@ export const Navigation = () => {
             {routes.map(({ path, Component }) => (
               <Route key={path} path={path} element={<Component />} />
             ))}
-            <Route path="/*" element={<Navigate to="/" replace />} />
+            <Route path="/*" element={<Navigate to={routes[0].to} />} />
           </Routes>
         </div>
       </BrowserRouter>

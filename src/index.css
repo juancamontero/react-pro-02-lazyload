@@ -1,7 +1,8 @@
-html,body {
+html,
+body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   background-color: #282c34;
   color: white;
@@ -10,14 +11,38 @@ html,body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 
 .main-layout {
   display: flex;
   flex-direction: row;
+}
+
+.main-lazy-page {
+  width: 100%;
+}
+
+.lazy-menu {
+  background-color: #363143;
+  height: 100px;
+  margin-right: 15px;
+  /* overflow-y: scroll; */
+  text-align: center;
+  /* width: 800px; */
+  padding-left: 1.6%;
+  padding-right: 1.6%;
+  padding-top: 1.6%;
+}
+
+.lazy-menu ul {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 4%;
+  padding-left: 0;
 }
 
 nav {
@@ -31,22 +56,17 @@ nav {
   padding-right: 1.6%;
   padding-top: 1.6%;
 }
-nav ul {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 0;
-}
 
+.lazy-menu li,
 nav li {
   list-style: none;
   margin-bottom: 10px;
 }
 
+.lazy-menu li a,
 nav li a {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.45rem;
   text-decoration: none;
 }
 
@@ -55,7 +75,8 @@ nav img {
   width: 175px;
 }
 
+.lazy-menu .nav-active,
 .nav-active {
   color: grey;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
