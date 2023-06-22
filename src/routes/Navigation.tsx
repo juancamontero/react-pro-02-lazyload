@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+
 import logo from "../../public/logo.svg";
 import {
   BrowserRouter,
@@ -8,7 +8,6 @@ import {
   Routes,
 } from "react-router-dom";
 
-import { routes } from "./routes";
 
 export const Navigation = () => {
   return (
