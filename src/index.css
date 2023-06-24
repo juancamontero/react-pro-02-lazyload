@@ -57,6 +57,11 @@ nav {
   padding-top: 1.6%;
 }
 
+nav ul {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .lazy-menu li,
 nav li {
   list-style: none;
@@ -71,12 +76,13 @@ nav li a {
 }
 
 nav img {
-  height: 175px;
-  width: 175px;
+  height: 155px;
+  width: 155px;
 }
 
 .lazy-menu .nav-active,
 .nav-active {
   color: grey;
   transition: all 0.3s ease-out;
+  text-decoration: underline;
 }
