@@ -39,10 +39,10 @@ code {
 .lazy-menu ul {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
-
-  padding-left: 10%;
+  column-gap: 4%;
+  padding-left: 0;
 }
 
 nav {
@@ -55,6 +55,11 @@ nav {
   padding-left: 1.6%;
   padding-right: 1.6%;
   padding-top: 1.6%;
+}
+
+nav ul {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .lazy-menu li,
@@ -71,12 +76,13 @@ nav li a {
 }
 
 nav img {
-  height: 175px;
-  width: 175px;
+  height: 155px;
+  width: 155px;
 }
 
 .lazy-menu .nav-active,
 .nav-active {
   color: grey;
   transition: all 0.3s ease-out;
+  text-decoration: underline;
 }
