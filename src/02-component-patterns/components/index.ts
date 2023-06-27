@@ -10,7 +10,7 @@ import { ProductTitle } from './ProductTitle'
 import { ProductCardHOCProps } from '../interfaces/productInterfaces'
 
 export const ProductCard: ProductCardHOCProps = Object.assign(ProductCardHOC, {
-    Buttons: ProductButtons,
     Image: ProductImage,
+    Buttons: ProductButtons,
     Title: ProductTitle
 })
