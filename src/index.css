@@ -51,7 +51,7 @@ nav {
   margin-right: 15px;
   /* overflow-y: scroll; */
   text-align: center;
-  width: 250px;
+  width: 150px;
   padding-left: 1.6%;
   padding-right: 1.6%;
   padding-top: 1.6%;
@@ -71,13 +71,13 @@ nav li {
 .lazy-menu li a,
 nav li a {
   color: white;
-  font-size: 1.45rem;
+  font-size: 1.25rem;
   text-decoration: none;
 }
 
 nav img {
-  height: 155px;
-  width: 155px;
+  height: 125px;
+  width: 125px;
 }
 
 .lazy-menu .nav-active,
