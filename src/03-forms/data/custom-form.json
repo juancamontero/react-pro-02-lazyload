@@ -1,0 +1,38 @@
+[
+  {
+    "type": "text",
+    "name": "firstName",
+    "placeholder": "John",
+    "value": "",
+    "label": "First Name",
+    "validations": [{ "type": "required" }, { "type": "minLength", "value": 5 }]
+  },
+  {
+    "type": "text",
+    "name": "lastName",
+    "placeholder": "Doe",
+    "value": "",
+    "label": "Last Name",
+    "validations": [{ "type": "required" }, { "type": "minLength", "value": 5 }]
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "johndoe@mail.com",
+    "value": "",
+    "label": "Email Address",
+    "validations": [{ "type": "required" }, {"type": "email"}]
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "value": "",
+    "label": "Favorite Game",
+    "options": [
+      { "id": "gt7", "label": "Grand Turismo 7" },
+      { "id": "nfs", "label": "Need for Speed" },
+      { "id": "f123", "label": "F1 2022" }
+    ],
+    "validations": [{ "type": "required" }]
+  }
+]

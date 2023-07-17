@@ -1,4 +1,3 @@
-
 import logo from "../../public/logo.svg";
 import {
   BrowserRouter,
@@ -7,9 +6,15 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import { FormikAbstractionPage, FormikBasicPage, FormikComponentsPage, FormikYupPage, RegisterPage } from "../03-forms/pages";
-
-
+import {
+  DynamicForm,
+  FormikAbstractionPage,
+  FormikBasicPage,
+  FormikComponentsPage,
+  FormikYupPage,
+  RegisterFormikPage,
+  RegisterPage,
+} from "../03-forms/pages";
 
 export const Navigation = () => {
   return (
@@ -58,16 +63,36 @@ export const Navigation = () => {
                 Formik Abstraction
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/register-formik"
+                className={({ isActive }) => (!isActive ? "nav-active" : "")}
+              >
+                Formik Register Page
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/dynamic-form"
+                className={({ isActive }) => (!isActive ? "nav-active" : "")}
+              >
+                Dynamic Form
+              </NavLink>
+            </li>
           </ul>
         </nav>
 
-
         <Routes>
-          <Route path="register" element={<RegisterPage/>} />
-          <Route path="formik-basic" element={<FormikBasicPage/>} />
-          <Route path="formik-yup" element={<FormikYupPage/>} />
-          <Route path="formik-components" element={<FormikComponentsPage/>} />
-          <Route path="formik-abstraction" element={<FormikAbstractionPage/>} />
+          <Route path="register" element={<RegisterPage />} />
+          <Route path="formik-basic" element={<FormikBasicPage />} />
+          <Route path="formik-yup" element={<FormikYupPage />} />
+          <Route path="formik-components" element={<FormikComponentsPage />} />
+          <Route
+            path="formik-abstraction"
+            element={<FormikAbstractionPage />}
+          />
+          <Route path="register-formik" element={<RegisterFormikPage />} />
+          <Route path="dynamic-form" element={<DynamicForm/>} />
           <Route path="home" element={<h1>Home Page</h1>} />
           <Route path="/*" element={<Navigate to="/home" />} />
         </Routes>

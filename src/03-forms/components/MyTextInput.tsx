@@ -14,7 +14,7 @@ export const MyTextInput = ({ label, ...props }: Props) => {
   return (
     <>
       <label htmlFor={props.id || props.name}>{label}</label>
-      <input type={ props.type || 'text'} className="text-input" {...field} {...props} />
+      <input type="text" className="text-input" {...field} {...props} />
       <ErrorMessage name={props.name}  component="span"/>
 
       {/* {meta.touched && meta.error && (
